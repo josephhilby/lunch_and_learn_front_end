@@ -89,11 +89,9 @@ This application was made with the following:
 
 To install and run on your personal computer you will need to do the following:
 
-1. Get a free API Key for EDAMAM Recipe at [https://developer.edamam.com/edamam-recipe-api](https://developer.edamam.com/edamam-recipe-api)
-2. Get a free API Key for YouTube at [https://developers.google.com/youtube/v3/getting-started](https://developers.google.com/youtube/v3/getting-started)
-3. Get a free API Key for Pexels at [https://www.pexels.com/api/](https://www.pexels.com/api/)
-4. Fork and clone the repo to your local machine
-5. Install gems and create database
+1. This is a simple front-end application to add some user interface. Before you install this project, please follow [this_link](https://github.com/josephhilby/lunch_and_learn) and complete installation of the back-end service.
+2. Fork and clone the repo to your local machine.
+3. Install gems and create database.
 
    ```sh
    bundle install
@@ -101,330 +99,20 @@ To install and run on your personal computer you will need to do the following:
    bundle exec figaro install
    ```
 
-<br />
 
-<table border="0" style="word-wrap:break-word; table-layout: fixed; width: 100%;">
-<tr>
-<th><b style="font-size:30px">`schema.rb`</b></th>
-<th><b style="font-size:30px">DB Diagram</b></th>
-</tr>
-<tr>
-<td style="width: 60%">
-
-```ruby
-ActiveRecord::Schema.define(version: 2023_01_15_233149) do
-  enable_extension "plpgsql"
-
-  create_table "favorites", force: :cascade do |t|
-    t.string "country"
-    t.string "recipe_link"
-    t.string "recipe_title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "api_key"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users_favorites", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "favorite_id"
-    t.index ["favorite_id"], name: "index_users_favorites_...
-    t.index ["user_id"], name: "index_users_favorites_on_us...
-  end
-
-  add_foreign_key "users_favorites", "favorites"
-  add_foreign_key "users_favorites", "users"
-end
-```
-
-</td>
-<td style="width: 40%"><img src="lib/images/database_v2.png" alt="Database" style='width: 100%'></td>
-</tr>
-</table>
-
-6. Enter your API in the `config/application.yml` file
-
-    ```yml
-    edam_app_id: <YOUR APP ID HERE>
-    edam_app_key: <YOUR KEY HERE>
-    yt_key: <YOUR KEY HERE>
-    pexels_token: <YOUR TOKEN HERE>
-    ```
-
-7. Start your rails server in the root directory
+4. Start your rails server in the root directory.
 
     ```sh
     rails s
     ```
 
-8. Now all you need to do is make a request to one of the endpoints. Documentation for all API Endpoints can be found below.
+5. Now all you need to do is navigate to `localhost:3000/`.
 
-<p align="right">(<a href="#README">back to top</a>)</p>
+6. After you create an account with ***Lunch and Learn*** if you wish to do any testing. Enter your API key in the `config/application.yml` file.
 
-<!-- ENDPOINTS -->
-## API Endpoints
-
-### GET
-
-* `localhost:3000`/api/v1/recipes[^1]
-* `localhost:3000`/api/v1/learning_resources[^2]
-* `localhost:3000`/api/v1/favorites
-
-### POST
-
-* `localhost:3000`/api/v1/users
-* `localhost:3000`/api/v1/sessions
-* `localhost:3000`/api/v1/favorites
-
-### DELETE
-
-* `localhost:3000`/api/v1/favorites
-
----
-
-### GET /api/v1/recipes?country=thailand
-
-Get a list of recipes from a random country (if no params are passed) OR by selected country, through params.
-
-**Parameters**
-
-|          Name | Required |  Type   |  Description     |
-| -------------:|:--------:|:-------:| ---------------- |
-|     `country` |    no    | string  | The country you want to get recipes from.   |
-
-**Response**
-
-```
-{
-    "data": [
-        {
-            "id": null,
-            "type": "recipe",
-            "attributes": {
-                "title": "Andy Ricker's Naam Cheuam Naam Taan Piip (Palm Sugar Simple Syrup)",
-                "url": "https://www.seriouseats.com/recipes/2013/11/andy-rickers-naam-cheuam-naam-taan-piip-palm-sugar-simple-syrup.html",
-                "country": "thailand",
-                "image": "https://edamam-product-images.s3.amazonaws.com..."
-            }
-        },
-        {
-            "id": null,
-            "type": "recipe",
-            "attributes": {
-                "title": "Sriracha",
-                "url": "http://www.jamieoliver.com/recipes/vegetables-recipes/sriracha/",
-                "country": "thailand",
-                "image": "https://edamam-product-images.s3.amazonaws.com/."
-            }
-        },
-        {...},
-        {...},
-        {...},
-        {etc},
-    ]
-}
-```
-
-### GET /api/v1/learning_resources?country=laos
-
-Get a list of learning resources from a random country (if no params are passed) OR by selected country, through params.
-
-**Parameters**
-
-|          Name | Required |  Type   |  Description     |
-| -------------:|:--------:|:-------:| ---------------- |
-|     `country` |    no    | string  | The country you want to get learning resources from.   |
-
-**Response**
-
-```
-{
-    "data": {
-        "id": null,
-        "type": "learning_resource",
-        "attributes": {
-            "country": "laos",
-            "video": {
-                "title": "A Super Quick History of Laos",
-                "youtube_video_id": "uw8hjVqxMXw"
-            },
-            "images": [
-                {
-                    "alt_tag": "standing statue and temples landmark during daytime",
-                    "url": "https://images.unsplash.com/photo-1528181304800-259b08848526?ixid=MnwzNzg2NzV8MHwxfHNlYXJjaHwxfHx0aGFpbGFuZHxlbnwwfHx8fDE2Njc4Njk1NTA&ixlib=rb-4.0.3"
-                },
-                {
-                    "alt_tag": "five brown wooden boats",
-                    "url": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixid=MnwzNzg2NzV8MHwxfHNlYXJjaHwyfHx0aGFpbGFuZHxlbnwwfHx8fDE2Njc4Njk1NTA&ixlib=rb-4.0.3"
-                },
-                {
-                    "alt_tag": "orange temples during daytime",
-                    "url": "https://images.unsplash.com/photo-1563492065599-3520f775eeed?ixid=MnwzNzg2NzV8MHwxfHNlYXJjaHwzfHx0aGFpbGFuZHxlbnwwfHx8fDE2Njc4Njk1NTA&ixlib=rb-4.0.3"
-                },
-                {...},
-                {...},
-                {...},
-                {etc},
-              ]
-        }
-    }
-}
-```
-
-### GET /api/v1/favorites?api_key=jgn983hy48thw9begh98h4539h4
-
-Get a list of your user's favorite recipes.
-
-**Parameters**
-
-|          Name | Required |  Type   |  Description     |
-| -------------:|:--------:|:-------:| ---------------- |
-|     `api_key` |    yes   | string  | A unique key created after a successful POST /api/v1/users used to identify user requests   |
-
-**Response**
-
-```
-{
-    "data": [
-        {
-            "id": "1",
-            "type": "favorite",
-            "attributes": {
-                "recipe_title": "Recipe: Egyptian Tomato Soup",
-                "recipe_link": "http://www.thekitchn.com/recipe-egyptian-tomato-soup-weeknight....",
-                "country": "egypt",
-                "created_at": "2022-11-02T02:17:54.111Z"
-            }
-        },
-        {
-            "id": "2",
-            "type": "favorite",
-            "attributes": {
-                "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)",
-                "recipe_link": "https://www.tastingtable.com/.....",
-                "country": "thailand",
-                "created_at": "2022-11-07T03:44:08.917Z"
-            }
-        }
-    ]
- }
-```
-
-### POST /api/v1/users
-
-Create a new user.
-
-**Parameters (JSON payload in request body)**
-
-```
-{
-  "name": "Athena Dao",
-  "email": "athenadao@bestgirlever.com",
-  "password": "supersecretpassword",
-  "password_confirmation": "supersecretpassword"
-}
-```
-
-**Response**
-
-```
-{
-  "data": {
-    "type": "user",
-    "id": "1",
-    "attributes": {
-      "name": "Athena Dao",
-      "email": "athenadao@bestgirlever.com",
-      "api_key": "jgn983hy48thw9begh98h4539h4"
-    }
-  }
-}
-```
-
-### POST /api/v1/sessions
-
-Get user info for authentication use on front-end app.
-
-**Parameters (JSON payload in request body)**
-
-```
-{
-  "email": "athenadao@bestgirlever.com",
-  "password": "supersecretpassword"
-}
-```
-
-**Response**
-
-```
-{
-  "data": {
-    "type": "user",
-    "id": "1",
-    "attributes": {
-      "name": "Athena Dao",
-      "email": "athenadao@bestgirlever.com",
-      "api_key": "jgn983hy48thw9begh98h4539h4"
-    }
-  }
-}
-```
-
-### POST /api/v1/favorites
-
-Create a new favorite recipe for the select user.
-
-**Parameters (JSON payload in request body)**
-
-```
-{
-    "api_key": "jgn983hy48thw9begh98h4539h4",
-    "country": "thailand",
-    "recipe_link": "https://www.tastingtable.com/.....",
-    "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
-}
-```
-
-**Response**
-
-```
-{
-    "success": "Favorite added successfully"
-}
-```
-
-### DELETE /api/v1/favorites
-
-Delete a selected favorite recipe for the select user.
-
-**Parameters (JSON payload in request body)**
-
-```
-{
-    "api_key": "jgn983hy48thw9begh98h4539h4",
-    "country": "thailand",
-    "recipe_link": "https://www.tastingtable.com/.....",
-    "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
-}
-```
-
-**Response**
-
-```
-{
-    "success": "Favorite removed successfully"
-}
-```
-
-[^1]: Note: To changet the port, go to `config/puma.rb` and enter your desired port #: `port        ENV.fetch("PORT") { <YOUR NUMBER HERE> }`
-[^2]: Note: The `:country` section in the JSON Response refers to the search criteria. If no video is found on that country, a video on a related country (by culture or geographic area) will instead be returned.
+    ```yml
+    app_key: <YOUR APP ID HERE>
+    ```
 
 <p align="right">(<a href="#README">back to top</a>)</p>
 
@@ -451,6 +139,37 @@ Super Stretch Goals
 * [ ] Deploy to Heroku
 
 See the [open issues](https://github.com/josephhilby/lunch_and_learn/issues) for a full list of proposed features (and known issues).
+
+### Wireframes
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Login</th>
+    </tr>
+    <tr>
+      <td><img src="lib/images/log_in_or_register.png"></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Recipes</th>
+    </tr>
+    <tr>
+      <td><img src="lib/images/recipes_show.png"></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Learning Resources</th>
+      <th>Favorite Recipes</th>
+    </tr>
+    <tr>
+      <td><img src="lib/images/country_show.png"></td>
+      <td><img src="lib/images/favorites.png"></td>
+    </tr>
+  </table>
+</div>
 
 ### Learning Goals
 
