@@ -140,6 +140,37 @@ Super Stretch Goals
 
 See the [open issues](https://github.com/josephhilby/lunch_and_learn/issues) for a full list of proposed features (and known issues).
 
+### Wireframes
+
+<div align="center">
+  <table>
+    <th>
+      <td>Login</td>
+    </th>
+    <tr>
+      <td><img src="lib/images/log_in_or_register.png"></td>
+    </tr>
+  </table>
+  <table>
+    <th>
+      <td>Recipes</td>
+    </th>
+    <tr>
+      <td><img src="lib/images/recipes_show.png"></td>
+    </tr>
+  </table>
+  <table>
+    <th>
+      <td>Learning Resources</td>
+      <td>Favorite Recipes</td>
+    </th>
+    <tr>
+      <td><img src="lib/images/country_show.png"></td>
+      <td><img src="lib/images/favorites.png"></td>
+    </tr>
+  </table>
+</div>
+
 ### Learning Goals
 
 * Expose an API that aggregates data from multiple external APIs
