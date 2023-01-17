@@ -1,36 +1,29 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: %i[discover show]
-  skip_before_action :check_login, only: [:new, :create, :destroy ]
+  # before_action :find_user, only: %i[discover show]
+  # skip_before_action :check_login, only: [:new, :create, :destroy ]
+  skip_before_action :verify_authenticity_token
 
   def new; end
 
   def create
-    user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
-      if user.admin?
-        flash[:success] = "Welcome, Administrator #{user.email}"
-      elsif user.default?
-        reset_session
-        session[:user_id] = user.id
-        flash[:success] = "Welcome, #{user.email}"
-        redirect_to user_path(user)
-      end
+    user = UsersFacade.new(user_params).find_user
+    if user
+      reset_session
+      session[:user_id] = user.id
+      flash[:success] = "Welcome, #{user.email}"
+      redirect_to user_path
     else
       flash[:error] = "Unknown username or password"
-      render :login_form
+      render :new
     end
   end
 
   def destroy
     reset_session
-    redirect_to root_path
+    redirect_to '/'
   end
 
   private
-
-  def find_user
-    @user = User.find(params[:id])
-  end
 
   def user_params
     params.permit(:name, :email, :password, :password_confirmation)

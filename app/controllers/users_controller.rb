@@ -1,27 +1,25 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: %i[discover show]
-  skip_before_action :check_login, only: [:new, :create]
+  # before_action :find_user, only: %i[discover show]
+  # skip_before_action :check_login, only: [:new, :create]
+  skip_before_action :verify_authenticity_token
 
   def new; end
 
   def create
-    new_user = User.new(user_params)
-    if new_user.save
+    new_user = UsersFacade.new(user_params).create_user
+    # require'pry';binding.pry
+    if new_user
       reset_session
       session[:user_id] = new_user.id
       flash[:success] = "Welcome, #{new_user.email}"
-      redirect_to user_path(new_user)
+      redirect_to recipes_path(new_user)
     else
       redirect_to register_path
-      flash[:alert] = new_user.errors.full_messages.to_sentence
+      flash[:alert] = UsersFacade.new(user_params).post_message
     end
   end
 
   private
-
-  def find_user
-    @user = User.find(params[:id])
-  end
 
   def user_params
     params.permit(:name, :email, :password, :password_confirmation)
