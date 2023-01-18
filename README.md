@@ -119,23 +119,23 @@ To install and run on your personal computer you will need to do the following:
 <!-- ROADMAP -->
 ## Roadmap
 
-Main Goal(s)
-* [x] GET /recipes Endpoint
-* [x] GET /learning_resources Endpoint
-* [x] POST /users Endpoint
-* [x] POST /sessions
-* [x] POST /favorites Endpoint
-* [x] GET /favorites Endpoint
+Front-end Main Goal(s)
+* [x] `/landing` show page
+* [x] `/register` new page
+* [x] `/login` new page
+* [x] `/recipes` index page
+* [ ] `/country/:name` show page
+* [ ] `/favorites` index page
 
-Stretch Goals
-* [x] Add 400 level status codes and prams check
-* [x] Implement basic authentication with bcrypt
-* [x] DELETE /favorites Endpoint
-* [x] Utilize Cashing OR Background Workers
+Front-end Stretch Goals
+* [ ] Add prams check and error handeling
+* [ ] Update pages with Bootstrap
+* [ ] Implement basic authentication with bcrypt
+* [ ] Utilize Cashing OR Background Workers
 
-Super Stretch Goals
-* [ ] Generate basic front-end
-* [ ] Add Google OAuth
+Front and Back-end Stretch Goals
+* [ ] Update docs with Swagger
+* [ ] Move authentication from Bcrypt to Google OAuth
 * [ ] Deploy to Heroku
 
 See the [open issues](https://github.com/josephhilby/lunch_and_learn/issues) for a full list of proposed features (and known issues).
@@ -246,7 +246,7 @@ Lunch and Learn is a ***Ruby on Rails*** web application hosted on Heroku.
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Do you have a better & cooler way of doing what I did? Your contribution would be **greatly appreciated**.
+Do you have a better & cooler way of doing what we did? Your contribution would be **greatly appreciated**.
 
 Please fork the repo, create your branch, and create a pull request. You can also simply open an issue with the tag "enhancement".
 
