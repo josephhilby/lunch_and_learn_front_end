@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5001/api/v1/recipes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e460a5644ef0865d933dad051233a025"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 287fa915-f5c7-43cc-8cbe-862e969c66c4
+      X-Runtime:
+      - '0.753816'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":null,"type":"recipe","attributes":{"title":"Gallopinto
+        (Nicaraguan Rice and Beans) Recipe","url":"http://www.edamam.com/ontologies/edamam.owl#recipe_5e9886584384546f21841a08b6d1a724","country":"Nicaragua","image":"https://edamam-product-images.s3.amazonaws.com/web-img/eb8/eb80502b0d9d75c36cc11ff3d2bc24c9.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDvDCB0VCmAdy2Sf94ZFuZgAr0nz2s63Ei81Ofw1AyybAIgaTJ5YmOl0XKevqC5lqcZ0ifXyFl4J5PgSOrGr9CaIF8qzAQIXxAAGgwxODcwMTcxNTA5ODYiDLVAv9mTzuGR7mBOrSqpBC5QKTToQkX5Ti%2BqbBPohCBEwGNJUJQ4XUC2lilASzcZsZeY3mNDs7gRS6hyPBnqG39LJeLRfFmwZXDPBts8PGkOr7JyhJlEo2j4CTdT%2BgrQ1%2FSmQ9JKRtp9WDE79RpxRmMrBnyb2UlWIQWgRNYfQRpaQzJLJVhnsIRubtSk7c7XvzUXQJgLongJ9bOuZQl5hmuiugyxK4oviORRrFY4hpJzkKyfvqbfarp7qfr2Tn%2BA6Yz%2FUwFdyLjkGrodNrHEnKw9v7WakJZ2ndstDpiGScCGDHJ%2F4renQXq6l4K%2FyamX5yW7CWTV3sZoPj54BJ3r8rkHb5GzrHrzRH15pNU0QQab5SZxsbYOTBp%2BSp625lYizPmCBMblZvLZHRXxplQKirFvIq4fXc3C79%2B0crGEDWLsp7NjPlY0uq6DEICxAuq3cytnmh%2Bc4c%2FInsUmDkjWUPtOH%2FSPndb8bPCrQVzrnOETpcsX2sckCJRRZkQxJR%2F7ibIUfadQVtiKHteoWnQTs0sEM4dFNvuRZRrwenF%2BAh0aIhTV41n6B78oNjoX9uSxzQuwkah4%2FbOA9luwSq0aa8%2FAPO%2B11KmuZs4lLYq%2FNHPOBQ%2BEN0lLhIVVIJ81RGoiHVmHFdjwCrx%2FuaptRLJNYCX2Wd8uC2h7JkIinEp%2FwMwVghZNK4Rr7%2Fnkv%2BaCNlPBLNuNTy3CBHQcq8uoVMpLsQKB0wrKq34f7GnU%2BOYTAEzFnosZ%2BIrVJVww8%2FSfngY6qQHS4W3GW%2B0zjtVz9A2fqLaTnaCiBKJ2r0Rm4%2F7YE4VkuTOFPKY%2BKklps73ulwZy75bVW3NBlyt1r%2BpgxDc8OG6sJlqXYmk7BMgImVIcoaEGN4tvfyAvdR%2Buhs5P1zPADaD38VVouSY0D5GLT%2B8kpiNsm8UkxYIgePHU7bDPsa4WDHs%2BOQVMaLCTVMH0uut4nUXU%2Bnah8klg10LuRp3YPl6i3fGlpILi%2BSf%2F\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Date=20230118T144553Z\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Expires=3600\u0026X-Amz-Credential=ASIASXCYXIIFC6NRSX4V%2F20230118%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Signature=886e85fec5ed37a7b28895c280591889e2f4388a9ac29ddfee40b2624da5c556"}},{"id":null,"type":"recipe","attributes":{"title":"The
+        \"Real\" Tres Leches Cake","url":"http://www.edamam.com/ontologies/edamam.owl#recipe_e7c3436e5c9f36a5da0a120924b5f8a3","country":"Nicaragua","image":"https://edamam-product-images.s3.amazonaws.com/web-img/24a/24ab0dd5c21a57d64b5f10e372bb9b61.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQDvDCB0VCmAdy2Sf94ZFuZgAr0nz2s63Ei81Ofw1AyybAIgaTJ5YmOl0XKevqC5lqcZ0ifXyFl4J5PgSOrGr9CaIF8qzAQIXxAAGgwxODcwMTcxNTA5ODYiDLVAv9mTzuGR7mBOrSqpBC5QKTToQkX5Ti%2BqbBPohCBEwGNJUJQ4XUC2lilASzcZsZeY3mNDs7gRS6hyPBnqG39LJeLRfFmwZXDPBts8PGkOr7JyhJlEo2j4CTdT%2BgrQ1%2FSmQ9JKRtp9WDE79RpxRmMrBnyb2UlWIQWgRNYfQRpaQzJLJVhnsIRubtSk7c7XvzUXQJgLongJ9bOuZQl5hmuiugyxK4oviORRrFY4hpJzkKyfvqbfarp7qfr2Tn%2BA6Yz%2FUwFdyLjkGrodNrHEnKw9v7WakJZ2ndstDpiGScCGDHJ%2F4renQXq6l4K%2FyamX5yW7CWTV3sZoPj54BJ3r8rkHb5GzrHrzRH15pNU0QQab5SZxsbYOTBp%2BSp625lYizPmCBMblZvLZHRXxplQKirFvIq4fXc3C79%2B0crGEDWLsp7NjPlY0uq6DEICxAuq3cytnmh%2Bc4c%2FInsUmDkjWUPtOH%2FSPndb8bPCrQVzrnOETpcsX2sckCJRRZkQxJR%2F7ibIUfadQVtiKHteoWnQTs0sEM4dFNvuRZRrwenF%2BAh0aIhTV41n6B78oNjoX9uSxzQuwkah4%2FbOA9luwSq0aa8%2FAPO%2B11KmuZs4lLYq%2FNHPOBQ%2BEN0lLhIVVIJ81RGoiHVmHFdjwCrx%2FuaptRLJNYCX2Wd8uC2h7JkIinEp%2FwMwVghZNK4Rr7%2Fnkv%2BaCNlPBLNuNTy3CBHQcq8uoVMpLsQKB0wrKq34f7GnU%2BOYTAEzFnosZ%2BIrVJVww8%2FSfngY6qQHS4W3GW%2B0zjtVz9A2fqLaTnaCiBKJ2r0Rm4%2F7YE4VkuTOFPKY%2BKklps73ulwZy75bVW3NBlyt1r%2BpgxDc8OG6sJlqXYmk7BMgImVIcoaEGN4tvfyAvdR%2Buhs5P1zPADaD38VVouSY0D5GLT%2B8kpiNsm8UkxYIgePHU7bDPsa4WDHs%2BOQVMaLCTVMH0uut4nUXU%2Bnah8klg10LuRp3YPl6i3fGlpILi%2BSf%2F\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Date=20230118T144553Z\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Expires=3600\u0026X-Amz-Credential=ASIASXCYXIIFC6NRSX4V%2F20230118%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Signature=fc8b0bb206e4f2ab7ea2c59d06ac5535e8cd8ebd027ac9db2d2b5ddf3ed6ac49"}}]}'
+  recorded_at: Wed, 18 Jan 2023 14:45:53 GMT
+recorded_with: VCR 6.1.0

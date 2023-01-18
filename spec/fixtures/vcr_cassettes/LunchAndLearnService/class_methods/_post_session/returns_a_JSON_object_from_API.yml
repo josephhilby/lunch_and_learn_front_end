@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5001/api/v1/sessions
+    body:
+      encoding: UTF-8
+      string: '{"email":"athenadao@best.com","password":"supersecretpassword"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"992d8c4dba78dfa2d0e3f0b53c21a10f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 61061cf6-6866-4449-be58-95f676f2e06a
+      X-Runtime:
+      - '0.281019'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Athena Dao","email":"athenadao@best.com","api_key":"1PkEh5W4pC1vB9gE0jdeXQ"}}}'
+  recorded_at: Wed, 18 Jan 2023 14:45:51 GMT
+recorded_with: VCR 6.1.0
