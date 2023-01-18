@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
 
   def index
     if params[:country]
-      @recipes = RecipesFacade.new
+      @recipes = RecipesFacade.new(params).find_recipes_by_country
     end
   end
 

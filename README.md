@@ -280,4 +280,3 @@ Distributed under the MIT License.
 [issues-shield]: https://img.shields.io/github/issues/josephhilby/lunch_and_learn.svg?style=for-the-badge
 [issues-url]: https://github.com/josephhilby/lunch_and_learn/issues
 [product-screenshot]: lib/images/screenshot.png
-
