@@ -1,4 +1,8 @@
 class LunchAndLearnService
+	def get_learning_resources(country)
+		get_url("/api/v1/learning_resources?country=#{country}")
+	end
+
 	def post_user(form_data)
 		post_url("/api/v1/users", form_data.to_json)
 	end
