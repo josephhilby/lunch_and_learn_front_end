@@ -6,15 +6,15 @@ RSpec.describe 'Country Show Page' do
       visit '/country/Japan'
     end
 
-    it 'displays the country\'s name' do
+    it 'displays the country\'s name', :vcr do
       expect(page).to have_content('Japan')
     end
 
-    xit 'displays a video window with a video from YouTube about the country' do
+    xit 'displays a video window with a video from YouTube about the country', :vcr do
 
     end
 
-    xit 'shows a gallery of images about the country' do
+    xit 'shows a gallery of images about the country', :vcr do
     end
   end
 end
