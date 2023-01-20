@@ -142,34 +142,35 @@ See the [open issues](https://github.com/josephhilby/lunch_and_learn/issues) for
 
 ### Wireframes
 
+<details>
+<summary>###Log In or Register</summary>
 <div align="center">
   <table>
-    <tr>
-      <th>Login</th>
-    </tr>
     <tr>
       <td><img src="lib/images/log_in_or_register.png"></td>
     </tr>
   </table>
+</div>
+</details>
+<details>
+<summary>###Recipes</summary>
   <table>
-    <tr>
-      <th>Recipes</th>
-    </tr>
     <tr>
       <td><img src="lib/images/recipes_show.png"></td>
     </tr>
   </table>
+</div>
+</details>
+<details>
+<summary>###Learning Resources & Favorites</summary>
   <table>
-    <tr>
-      <th>Learning Resources</th>
-      <th>Favorite Recipes</th>
-    </tr>
     <tr>
       <td><img src="lib/images/country_show.png"></td>
       <td><img src="lib/images/favorites.png"></td>
     </tr>
   </table>
 </div>
+</details>
 
 ### Learning Goals
 
