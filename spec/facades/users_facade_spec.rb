@@ -53,52 +53,65 @@ RSpec.describe UsersFacade do
       end
 		end
 
-		describe '.get_recipes_results' do
+		describe '.post_message' do
       context 'with valid params' do
-        it 'returns an Array of recipes from that country', :vcr do
-          results = UsersFacade.new({country: 'Thailand'}).get_recipes_results
-
-          expect(results).to be_a(Hash)
-          expect(results.count).to eq(1)
-          expect(results).to have_key(:data)
-          expect(results[:data]).to be_a(Array)
-
-          first_result = results[:data].first
-          expect(first_result).to be_a(Hash)
-          expect(first_result.count).to eq(3)
-
-          expect(first_result).to have_key(:id)
-          expect(first_result[:id]).to eq(nil)
-
-          expect(first_result).to have_key(:type)
-          expect(first_result[:type]).to be_a(String)
-          expect(first_result[:type]).to eq('recipe')
-
-          expect(first_result).to have_key(:attributes)
-          expect(first_result[:attributes]).to be_a(Hash)
-          expect(first_result[:attributes].count).to eq(4)
-
-          expect(first_result[:attributes]).to have_key(:title)
-          expect(first_result[:attributes][:title]).to be_a(String)
-
-          expect(first_result[:attributes]).to have_key(:url)
-          expect(first_result[:attributes][:url]).to be_a(String)
-
-          expect(first_result[:attributes]).to have_key(:country)
-          expect(first_result[:attributes][:country]).to be_a(String)
-          expect(first_result[:attributes][:country]).to eq('Thailand')
-
-          expect(first_result[:attributes]).to have_key(:image)
-          expect(first_result[:attributes][:image]).to be_a(String)
+        it 'returns nil', :vcr do
+          @good_create_params[:email] = 'new_email@to_not_conflict.com'
+          expect(UsersFacade.new(@good_create_params).post_message).to eq(nil)
         end
       end
 
       context 'with non-vlid params' do
         it 'returns an error message', :vcr do
-          expect(UsersFacade.new({country: 'xkcd'}).get_recipes_results).to eq({message: "Not Found"})
-          expect(UsersFacade.new({country: ''}).get_recipes_results).to eq({message: "Not Found"})
+          expect(UsersFacade.new(@bad_params).post_message).to eq("Name can't be blank and Email can't be blank")
         end
       end
 		end
+
+    describe '.session_message' do
+      context 'with valid params' do
+        it 'returns nil', :vcr do
+          expect(UsersFacade.new(@good_create_params).session_message).to eq(nil)
+        end
+      end
+
+      context 'with non-vlid params' do
+        it 'returns an error message', :vcr do
+          expect(UsersFacade.new(@bad_params).session_message).to eq("Unknown username or password")
+        end
+      end
+    end
 	end
 end
+          # expect(results).to be_a(Hash)
+          # expect(results.count).to eq(1)
+          # expect(results).to have_key(:data)
+          # expect(results[:data]).to be_a(Array)
+
+          # first_result = results[:data].first
+          # expect(first_result).to be_a(Hash)
+          # expect(first_result.count).to eq(3)
+
+          # expect(first_result).to have_key(:id)
+          # expect(first_result[:id]).to eq(nil)
+
+          # expect(first_result).to have_key(:type)
+          # expect(first_result[:type]).to be_a(String)
+          # expect(first_result[:type]).to eq('recipe')
+
+          # expect(first_result).to have_key(:attributes)
+          # expect(first_result[:attributes]).to be_a(Hash)
+          # expect(first_result[:attributes].count).to eq(4)
+
+          # expect(first_result[:attributes]).to have_key(:title)
+          # expect(first_result[:attributes][:title]).to be_a(String)
+
+          # expect(first_result[:attributes]).to have_key(:url)
+          # expect(first_result[:attributes][:url]).to be_a(String)
+
+          # expect(first_result[:attributes]).to have_key(:country)
+          # expect(first_result[:attributes][:country]).to be_a(String)
+          # expect(first_result[:attributes][:country]).to eq('Thailand')
+
+          # expect(first_result[:attributes]).to have_key(:image)
+          # expect(first_result[:attributes][:image]).to be_a(String)
