@@ -4,12 +4,12 @@ Rails.application.routes.draw do
 
   post '/users', to: 'users#create'
   get '/register', to: 'users#new'
-  get '/favorites/:id', to: 'users#show', as: '/favorites'
+  get '/favorites/:user_id', to: 'favorites#index', as: '/favorites'
 
   post '/sessions', to: 'sessions#create'
   get '/login', to: 'sessions#new'
 
   get '/recipes', to: 'recipes#index'
 
-  get '/country/:id', to: 'country#show'
+  get '/country/:name', to: 'country#show'
 end

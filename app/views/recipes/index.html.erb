@@ -16,14 +16,17 @@
     <div class='flex-items' id= 'random_country_button'>
       <%= button_to "Choose a Country for me!", recipes_path, method: :get, params: { country: 'random' },class: 'button1' %>
     </div>
+
     <div class='flex-items' id= 'my_favorites_button'>
       <%= button_to "Show me my favorites", favorites_path(@user), method: :get, class: 'button1' %>
     </div>
   </div>
+
   <% if @recipes %>
     <div class='flex-items' id= 'learn_about_country_button'>
       <%= button_to "Learn about #{@recipes.first.country}", url: "country/#{@recipes.first.country}", method: :get, class: 'button1' %>
     </div>
+
     <div class='cards' id='cards'>
       <% @recipes.each do |recipe| %>
         <article class='card'>
