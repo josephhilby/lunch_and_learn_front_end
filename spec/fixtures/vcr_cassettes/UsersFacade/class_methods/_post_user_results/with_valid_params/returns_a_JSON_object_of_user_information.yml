@@ -23,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b510adaede92e7736f5c205f8d71fc73"
+      - W/"0720d9ea7f980c96e63e5c8f70f345d5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b2b3f86b-d638-4224-8534-a94ced156323
+      - 0bc06225-087b-449d-bb1c-a1329fa5aab2
       X-Runtime:
-      - '0.422414'
+      - '0.301794'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Athena Dao","email":"new_new_email@to_not_conflict.com","api_key":"6NO5ZPg7PDA1USxzp7Nkuw"}}}'
-  recorded_at: Tue, 24 Jan 2023 21:39:49 GMT
+      string: '{"data":{"id":"3","type":"user","attributes":{"name":"Athena Dao","email":"new_new_email@to_not_conflict.com","api_key":"DpgHUuXU4tuAe9bSEm88TQ"}}}'
+  recorded_at: Tue, 24 Jan 2023 21:48:20 GMT
 recorded_with: VCR 6.1.0

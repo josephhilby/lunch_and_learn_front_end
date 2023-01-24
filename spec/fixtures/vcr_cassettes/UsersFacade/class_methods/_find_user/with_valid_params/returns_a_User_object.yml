@@ -23,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"69fdad5a414880ebbef9149beaa74a16"
+      - W/"381fd22900354530f0190b3645d0bc90"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0735a318-e33a-4a33-80da-f45c017bd0d5
+      - bef5a35e-da43-413e-9571-dfdeff6d2e74
       X-Runtime:
-      - '0.275580'
+      - '0.286467'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Athena Dao","email":"athenadao@bestgirlever.com","api_key":"9J_U2GS7ed1LGd7E6hWuYQ"}}}'
-  recorded_at: Fri, 20 Jan 2023 19:39:24 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Athena Dao","email":"athenadao@bestgirlever.com","api_key":"S4W0oMeMDVGtSDso_7GGxw"}}}'
+  recorded_at: Tue, 24 Jan 2023 21:48:18 GMT
 recorded_with: VCR 6.1.0

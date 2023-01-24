@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 1b63e379-42e6-477c-9c64-7df808ec3e0a
+      - 563e9a0f-4cc7-48f3-8807-679c81870079
       X-Runtime:
-      - '0.284865'
+      - '0.294678'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"Name can''t be blank and Email can''t be blank"}'
-  recorded_at: Fri, 20 Jan 2023 19:39:24 GMT
+  recorded_at: Tue, 24 Jan 2023 21:48:19 GMT
 recorded_with: VCR 6.1.0
