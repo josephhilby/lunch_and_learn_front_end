@@ -81,37 +81,56 @@ RSpec.describe UsersFacade do
         end
       end
     end
+
+    describe '.post_user_results' do
+      context 'with valid params' do
+        it 'returns a JSON object of user information', :vcr do
+          @good_create_params[:email] = 'new_new_email@to_not_conflict.com'
+          results = UsersFacade.new(@good_create_params).post_user_results
+
+          expect(results).to be_a(Hash)
+          expect(results.count).to eq(1)
+          expect(results).to have_key(:data)
+
+          result = results[:data]
+          expect(result).to be_a(Hash)
+          expect(result.count).to eq(3)
+
+          expect(result).to have_key(:id)
+          expect(result[:id]).to be_a(String)
+
+          expect(result).to have_key(:type)
+          expect(result[:type]).to be_a(String)
+          expect(result[:type]).to eq('user')
+
+          expect(result).to have_key(:attributes)
+          expect(result[:attributes]).to be_a(Hash)
+          expect(result[:attributes].count).to eq(3)
+
+          expect(result[:attributes]).to have_key(:name)
+          expect(result[:attributes][:name]).to be_a(String)
+          expect(result[:attributes][:name]).to eq("Athena Dao")
+
+          expect(result[:attributes]).to have_key(:email)
+          expect(result[:attributes][:email]).to be_a(String)
+          expect(result[:attributes][:email]).to eq('new_new_email@to_not_conflict.com')
+
+          expect(result[:attributes]).to have_key(:api_key)
+          expect(result[:attributes][:api_key]).to be_a(String)
+        end
+      end
+
+      context 'with non-valid params' do
+        it 'returns an error', :vcr do
+          expect(UsersFacade.new(@bad_params).post_user_results).to eq({message: "Name can't be blank and Email can't be blank"})
+        end
+      end
+    end
+
+    describe '.service' do
+      it 'returns a LunchAndLearnService object' do
+        expect(UsersFacade.new.service).to be_a(LunchAndLearnService)
+      end
+    end
 	end
 end
-          # expect(results).to be_a(Hash)
-          # expect(results.count).to eq(1)
-          # expect(results).to have_key(:data)
-          # expect(results[:data]).to be_a(Array)
-
-          # first_result = results[:data].first
-          # expect(first_result).to be_a(Hash)
-          # expect(first_result.count).to eq(3)
-
-          # expect(first_result).to have_key(:id)
-          # expect(first_result[:id]).to eq(nil)
-
-          # expect(first_result).to have_key(:type)
-          # expect(first_result[:type]).to be_a(String)
-          # expect(first_result[:type]).to eq('recipe')
-
-          # expect(first_result).to have_key(:attributes)
-          # expect(first_result[:attributes]).to be_a(Hash)
-          # expect(first_result[:attributes].count).to eq(4)
-
-          # expect(first_result[:attributes]).to have_key(:title)
-          # expect(first_result[:attributes][:title]).to be_a(String)
-
-          # expect(first_result[:attributes]).to have_key(:url)
-          # expect(first_result[:attributes][:url]).to be_a(String)
-
-          # expect(first_result[:attributes]).to have_key(:country)
-          # expect(first_result[:attributes][:country]).to be_a(String)
-          # expect(first_result[:attributes][:country]).to eq('Thailand')
-
-          # expect(first_result[:attributes]).to have_key(:image)
-          # expect(first_result[:attributes][:image]).to be_a(String)
