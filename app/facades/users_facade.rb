@@ -14,7 +14,11 @@ class UsersFacade
   end
 
   def find_user
-    User.new(post_session_results[:data])
+    if post_session_results[:message]
+      return nil
+    else
+      User.new(post_session_results[:data])
+    end
   end
 
   def post_message

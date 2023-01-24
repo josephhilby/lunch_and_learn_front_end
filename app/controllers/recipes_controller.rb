@@ -6,7 +6,9 @@ class RecipesController < ApplicationController
   def index
     if params[:country]
       @recipes = RecipesFacade.new(params).find_recipes_by_country
+      @message = RecipesFacade.new(params).get_message
     end
+
   end
 
   private

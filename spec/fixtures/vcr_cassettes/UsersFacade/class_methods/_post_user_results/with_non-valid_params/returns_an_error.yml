@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:5001/api/v1/sessions
+    uri: http://localhost:5001/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"athenadao@best.com","password":"supersecretpassword"}'
+      string: '{"password":"supersecretpassword"}'
     headers:
       Content-Type:
       - application/json
@@ -17,23 +17,21 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 201
-      message: Created
+      code: 400
+      message: Bad Request
     headers:
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"e2e410eafa214780e8a7cfc0b1091536"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - a4795a75-a45a-4f6c-9a48-75dc0ece61a4
+      - 63d1e708-99ee-40ca-84fc-0e3eef087f86
       X-Runtime:
-      - '0.276843'
+      - '0.276218'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Athena Dao","email":"athenadao@best.com","api_key":"oiHE0oCvcbwCaE7zjZZfnA"}}}'
+      string: '{"message":"Name can''t be blank and Email can''t be blank"}'
   recorded_at: Tue, 24 Jan 2023 21:48:20 GMT
 recorded_with: VCR 6.1.0

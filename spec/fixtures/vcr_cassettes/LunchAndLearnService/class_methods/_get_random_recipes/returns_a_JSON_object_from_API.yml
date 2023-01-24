@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5001/api/v1/recipes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"02c2484bceefc8145a57dfa2bdc2deca"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4df58119-3c67-4250-a4d3-fda926927808
+      X-Runtime:
+      - '0.652537'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":null,"type":"recipe","attributes":{"title":"Cook the
+        Book: Hani Slow-Baked Pork Jerky","url":"http://www.edamam.com/ontologies/edamam.owl#recipe_e6ec6ff22dbcb89865d321366a6d40b2","country":"North
+        Korea","image":"https://edamam-product-images.s3.amazonaws.com/web-img/48a/48ac88050010688c994792e8c7085d68.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCscjRoYaMN6hgc9kr%2BqrwMZymQVP8UW2naFSrjc92NIAIhAMxLK9EtNEG%2BelIHBypee5CKp1chN37iBztsf48PkJL5KtUECPf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2Igx2CC01vftmKC1UlYoqqQTOFAxMQYXoWPmpMoZEkDSYlDa%2BsiACtPr4dhBMvRgFIqcTx8J2LuD5TZ9C%2FkkySKc7aRUbwjvYfxvqQh0RlhXb%2Fc%2BciKVc%2FaYHsEUqXNf4FGRSKiYPzqcMoV0xORzNexbVdpAFjl2DnEaowtVMajt1Ra2cDns08gzjleMLIH2emgUT4aeQOrOvVzoK7rd3ETarhkfLSMaTfDoznF83Cuj0ZfKwYjUIM0HfVmWizxb8i8kOpnuMKCrKA1BZSKs77V2%2BKhHr9%2B7iak6LOGiNP2TVB8OVfpS1bhOA2fwFmiBXFEx20Jt6Jp6Zdonl7Vl2furngQUsiWD4tK3q%2Bf7cZKLY3e9OUa3lgOTtMKKrHTG%2BUNtDi2evwttO113f4rj5KkqUNhHeHTfLNskrad1tiOt%2FriP3AkXV1N21pP7Vp%2BQ1Txn%2FaN%2F2xErNRSQS5qZD6UMYDyhn8IEJE3hs76aLVYMqvGq%2FIGYouReV61JdNP1oxRH5UCJQS87d7JLZksRj4OGSvbRtmPsUNrc3bgxssTox%2FYetfuXiBHUVQkUvr%2Brj7o%2FMactqrPZwOpTHchqWXES8OKGQSks93eRDYaoPMA1cjNhOu%2FUpPyQKPa92N6pE29GmCELSjJl1VkiwNKESsb5J0FAdBKTicp%2BHlUeY14IRMEU5IdxqczJ4%2FzkiJyuv1qhi6gQ1Bj8gWcaTbfmDoHkgiDd47f7iwHuhzMEZjUAG03zMZecyvgLMMNOcwZ4GOqgBePl0SDZHKTbOMvdZ35uxRxXvGMw09jVqPykLvn9h1td4FiddRQFXrz4SRYWup41zIuhgLitCCPr9GqRy%2Bg5LgnHM0plTwrxfDzmY2di1pnKSmRzyGLEk2kwRpzfmkPp5WY88ALjkztjsuWRy8jyRD8IbOXqaW%2FcKkow8ExRqj3TC8OPgA9xa6bGsZ6B0bOBjDFGp8ofzYTJElK6gQQMwTQD8%2B0JPmX57\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Date=20230124T214822Z\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Expires=3600\u0026X-Amz-Credential=ASIASXCYXIIFAB3IGW5U%2F20230124%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Signature=11df03bd24e48ab30ce4ee7f05223050438dc92f6026d921327cfaff6eb2dc15"}},{"id":null,"type":"recipe","attributes":{"title":"Korean
+        Pickled Ramps","url":"http://www.edamam.com/ontologies/edamam.owl#recipe_00c70839091d8f21e498f6feb3fa1b86","country":"North
+        Korea","image":"https://edamam-product-images.s3.amazonaws.com/web-img/e90/e90f728b75cd4a4d6dda11e0f75cef44.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCscjRoYaMN6hgc9kr%2BqrwMZymQVP8UW2naFSrjc92NIAIhAMxLK9EtNEG%2BelIHBypee5CKp1chN37iBztsf48PkJL5KtUECPf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMTg3MDE3MTUwOTg2Igx2CC01vftmKC1UlYoqqQTOFAxMQYXoWPmpMoZEkDSYlDa%2BsiACtPr4dhBMvRgFIqcTx8J2LuD5TZ9C%2FkkySKc7aRUbwjvYfxvqQh0RlhXb%2Fc%2BciKVc%2FaYHsEUqXNf4FGRSKiYPzqcMoV0xORzNexbVdpAFjl2DnEaowtVMajt1Ra2cDns08gzjleMLIH2emgUT4aeQOrOvVzoK7rd3ETarhkfLSMaTfDoznF83Cuj0ZfKwYjUIM0HfVmWizxb8i8kOpnuMKCrKA1BZSKs77V2%2BKhHr9%2B7iak6LOGiNP2TVB8OVfpS1bhOA2fwFmiBXFEx20Jt6Jp6Zdonl7Vl2furngQUsiWD4tK3q%2Bf7cZKLY3e9OUa3lgOTtMKKrHTG%2BUNtDi2evwttO113f4rj5KkqUNhHeHTfLNskrad1tiOt%2FriP3AkXV1N21pP7Vp%2BQ1Txn%2FaN%2F2xErNRSQS5qZD6UMYDyhn8IEJE3hs76aLVYMqvGq%2FIGYouReV61JdNP1oxRH5UCJQS87d7JLZksRj4OGSvbRtmPsUNrc3bgxssTox%2FYetfuXiBHUVQkUvr%2Brj7o%2FMactqrPZwOpTHchqWXES8OKGQSks93eRDYaoPMA1cjNhOu%2FUpPyQKPa92N6pE29GmCELSjJl1VkiwNKESsb5J0FAdBKTicp%2BHlUeY14IRMEU5IdxqczJ4%2FzkiJyuv1qhi6gQ1Bj8gWcaTbfmDoHkgiDd47f7iwHuhzMEZjUAG03zMZecyvgLMMNOcwZ4GOqgBePl0SDZHKTbOMvdZ35uxRxXvGMw09jVqPykLvn9h1td4FiddRQFXrz4SRYWup41zIuhgLitCCPr9GqRy%2Bg5LgnHM0plTwrxfDzmY2di1pnKSmRzyGLEk2kwRpzfmkPp5WY88ALjkztjsuWRy8jyRD8IbOXqaW%2FcKkow8ExRqj3TC8OPgA9xa6bGsZ6B0bOBjDFGp8ofzYTJElK6gQQMwTQD8%2B0JPmX57\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Date=20230124T214822Z\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Expires=3600\u0026X-Amz-Credential=ASIASXCYXIIFAB3IGW5U%2F20230124%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Signature=bf8e3b299df58aec74622647e2683bec1c8251ddb3ca440382446b23e9896490"}}]}'
+  recorded_at: Tue, 24 Jan 2023 21:48:22 GMT
+recorded_with: VCR 6.1.0

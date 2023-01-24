@@ -23,7 +23,7 @@ class RecipesFacade
     if @params[:country] == 'random'
       @_results ||= service.get_random_recipes
     else
-      @_results ||= service.get_recipes(@params)
+      @_results ||= service.get_recipes(@params[:country])
     end
   end
 

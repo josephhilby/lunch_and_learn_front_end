@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5001/api/v1/sessions
     body:
       encoding: UTF-8
-      string: '{"email":"athenadao@best.com","password":"supersecretpassword"}'
+      string: '{"name":"Athena Dao","email":"athenadao@bestgirlever.com","password":"supersecretpassword","password_confirmation":"supersecretpassword"}'
     headers:
       Content-Type:
       - application/json
@@ -23,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e2e410eafa214780e8a7cfc0b1091536"
+      - W/"381fd22900354530f0190b3645d0bc90"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a4795a75-a45a-4f6c-9a48-75dc0ece61a4
+      - 6f51f15a-4c98-4463-ad6c-beb1bc6abe86
       X-Runtime:
-      - '0.276843'
+      - '0.285897'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"4","type":"user","attributes":{"name":"Athena Dao","email":"athenadao@best.com","api_key":"oiHE0oCvcbwCaE7zjZZfnA"}}}'
-  recorded_at: Tue, 24 Jan 2023 21:48:20 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Athena Dao","email":"athenadao@bestgirlever.com","api_key":"S4W0oMeMDVGtSDso_7GGxw"}}}'
+  recorded_at: Tue, 24 Jan 2023 21:48:19 GMT
 recorded_with: VCR 6.1.0
