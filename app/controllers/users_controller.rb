@@ -7,12 +7,11 @@ class UsersController < ApplicationController
 
   def create
     new_user = UsersFacade.new(user_params).create_user
-    # require'pry';binding.pry
     if new_user
       reset_session
       session[:user_id] = new_user.id
       flash[:success] = "Welcome, #{new_user.email}"
-      redirect_to recipes_path(new_user)
+      redirect_to recipes_path(new_user.id)
     else
       redirect_to register_path
       flash[:alert] = UsersFacade.new(user_params).post_message

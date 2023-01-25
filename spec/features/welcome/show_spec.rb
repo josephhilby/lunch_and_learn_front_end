@@ -7,7 +7,7 @@ RSpec.describe 'The Welcome Page', type: :feature do
     visit '/'
   end
 
-  describe 'When I visit the welcome page' do
+  describe 'When I visit the welcome show page' do
     context 'when I am not logged in' do
       it 'I see the title of the application' do
         expect(page).to have_content('Lunch and Learn')

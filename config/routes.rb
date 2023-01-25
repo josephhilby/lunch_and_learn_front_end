@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
   get '/login', to: 'sessions#new'
 
-  get '/recipes', to: 'recipes#index'
+  get '/recipes/:user_id', to: 'recipes#index', as: '/recipes'
 
   get '/country/:name', to: 'country#show'
 end
