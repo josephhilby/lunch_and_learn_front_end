@@ -1,7 +1,7 @@
-class UsersController < ApplicationController
+class SessionsController < ApplicationController
   # before_action :find_user, only: %i[discover show]
   # skip_before_action :check_login, only: [:new, :create, :destroy ]
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
 
   def new; end
 
