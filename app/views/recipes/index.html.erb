@@ -6,15 +6,15 @@
 
     <div class="flex-items" id="find_recipes_by_country_form">
       <%= form_with url: recipes_path, method: :get, local: true do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+        <%= f.label :country %>
+        <%= f.text_field :country %>
 
         <%= f.submit "Find Recipes", class: 'button1' %>
       <% end %> <br>
     </div>
 
     <div class='flex-items' id= 'random_country_button'>
-      <%= button_to "Choose a Country for me!", recipes_path, method: :get, params: { country: 'random' },class: 'button1' %>
+      <%= button_to "Choose a Country for me!", recipes_path, method: :get, params: { country: 'random' }, class: 'button1' %>
     </div>
 
     <div class='flex-items' id= 'my_favorites_button'>
