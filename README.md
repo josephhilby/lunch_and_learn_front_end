@@ -143,7 +143,7 @@ See the [open issues](https://github.com/josephhilby/lunch_and_learn/issues) for
 ### Wireframes
 
 <details>
-<summary>###Log In or Register</summary>
+<summary><h3>Log In or Register</h3></summary>
 <div align="center">
   <table>
     <tr>
@@ -153,7 +153,7 @@ See the [open issues](https://github.com/josephhilby/lunch_and_learn/issues) for
 </div>
 </details>
 <details>
-<summary>###Recipes</summary>
+<summary><h3>Recipes</h3></summary>
   <table>
     <tr>
       <td><img src="lib/images/recipes_show.png"></td>
@@ -162,7 +162,7 @@ See the [open issues](https://github.com/josephhilby/lunch_and_learn/issues) for
 </div>
 </details>
 <details>
-<summary>###Learning Resources & Favorites</summary>
+<summary><h3>Learning Resources & Favorites</h3></summary>
   <table>
     <tr>
       <td><img src="lib/images/country_show.png"></td>
