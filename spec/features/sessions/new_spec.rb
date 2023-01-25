@@ -12,7 +12,7 @@ RSpec.describe 'The Log In Page', type: :feature do
 
     context 'given valid params', :vcr do
       it 'start a session and route to recipes index page' do
-        fill_in :email, with: 'test@test.com'
+        fill_in :email, with: 'test@test'
         fill_in :password, with: 'test'
         click_button 'Log In'
 
