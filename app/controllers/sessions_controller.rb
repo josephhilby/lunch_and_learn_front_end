@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       reset_session
       session[:user_id] = user.id
       flash[:success] = "Welcome, #{user.email}"
-      redirect_to user_path
+      redirect_to recipes_path(user.id)
     else
       flash[:error] = "Unknown username or password"
       render :new

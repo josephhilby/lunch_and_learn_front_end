@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5001/api/v1/sessions
+    body:
+      encoding: UTF-8
+      string: '{"email":"","password":"test"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 7caa652b-997a-4a93-af11-a34571a7221b
+      X-Runtime:
+      - '0.008212'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Unknown username or password"}'
+  recorded_at: Wed, 25 Jan 2023 20:21:22 GMT
+recorded_with: VCR 6.1.0
