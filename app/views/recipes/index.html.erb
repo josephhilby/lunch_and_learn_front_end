@@ -22,20 +22,22 @@
     </div>
   </div>
 
-  <% if @recipes %>
-    <div class='flex-items' id= 'learn_about_country_button'>
-      <%= button_to "Learn about #{@recipes.first.country}", url: "country/#{@recipes.first.country}", method: :get, class: 'button1' %>
-    </div>
+  <div class='flex-container'>
+    <% if @recipes %>
+      <div class='flex-items' id= 'learn_about_country_button'>
+        <%= button_to "Learn about #{@recipes.first.country}", url: "country/#{@recipes.first.country}", method: :get, class: 'button1' %>
+      </div>
 
-    <div class='cards' id='cards'>
-      <% @recipes.each do |recipe| %>
-        <article class='card'>
-          <img src=<%="#{recipe.image}"%>>
-          <div class='text'>
-            <h3 style="text-decoration: none;"><%= link_to recipe.title, "#{recipe.url}" %></h3>
-          </div>
-        </article>
-      <% end %>
-    </div>
-  <% end %>
+      <div class='cards' id='cards'>
+        <% @recipes.each do |recipe| %>
+          <article class='card'>
+            <img src=<%="#{recipe.image}"%>>
+            <div class='text'>
+              <h3 style="text-decoration: none;"><%= link_to recipe.title, "#{recipe.url}" %></h3>
+            </div>
+          </article>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </body>

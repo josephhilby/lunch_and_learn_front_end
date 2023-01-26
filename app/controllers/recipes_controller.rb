@@ -4,7 +4,6 @@ class RecipesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    # require'pry';binding.pry
     if params[:country]
       @recipes = RecipesFacade.new(params).find_recipes_by_country
       @message = RecipesFacade.new(params).get_message
