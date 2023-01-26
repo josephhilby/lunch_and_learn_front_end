@@ -23,7 +23,7 @@
   </div>
 
   <div class='flex-container'>
-    <% if @recipes %>
+    <% if @recipes && !@recipes.empty? %>
       <div class='flex-items' id= 'learn_about_country_button'>
         <%= button_to "Learn about #{@recipes.first.country}", url: "country/#{@recipes.first.country}", method: :get, class: 'button1' %>
       </div>
@@ -38,6 +38,8 @@
           </article>
         <% end %>
       </div>
+    <% elsif @recipes && @recipes.empty? %>
+      Please try again
     <% end %>
   </div>
 </body>

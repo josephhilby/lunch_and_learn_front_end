@@ -15,7 +15,10 @@
         <%= msg %>
       </div>
     <% end %>
-    <%= link_to 'Home', "/" %> <% if logged_in? %> | <%= link_to 'Log Out', logout_path %> <% end %><br><br>
+    <%= link_to 'Home', "/" %>
+    <% if logged_in? %>
+      | <%= link_to 'Find Recipes', recipes_path(@current_user_id) %> | <%= link_to 'My Favorites', favorites_path(@current_user_id) %> | <%= link_to 'Log Out', logout_path %>
+    <% end %><br><br>
     <h1><center>Lunch and Learn</center></h1>
     <%= yield %>
   </body>
