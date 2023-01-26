@@ -4,11 +4,11 @@ class RecipesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
+    @user_id = params[:user_id]
     if params[:country]
       @recipes = RecipesFacade.new(params).find_recipes_by_country
       @message = RecipesFacade.new(params).get_message
     end
-
   end
 
   private

@@ -6,11 +6,12 @@ class FavoritesController < ApplicationController
   def new; end
 
   def index
+
   end
 
   private
 
-  def favorite_params
-    params.permit()
-  end
+  # def favorite_params
+  #   params.permit()
+  # end
 end
