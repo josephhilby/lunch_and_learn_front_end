@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
-  # before_action :find_user, only: %i[discover show]
-  # skip_before_action :check_login, only: [:new, :create]
+  before_action :find_user, only: %i[discover show]
+  skip_before_action :check_login, only: [:new, :create]
   skip_before_action :verify_authenticity_token
 
   def index
@@ -8,12 +8,5 @@ class RecipesController < ApplicationController
       @recipes = RecipesFacade.new(params).find_recipes_by_country
       @message = RecipesFacade.new(params).get_message
     end
-
-  end
-
-  private
-
-  def user_params
-    params.permit(:name, :email, :password, :password_confirmation)
   end
 end
