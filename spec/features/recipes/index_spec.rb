@@ -10,12 +10,10 @@ RSpec.describe 'The Recipes Page', type: :feature do
 
   describe 'When I visit the recipes show page' do
     it 'I see a flash message "Welcome, test@test"', :vcr do
-      save_and_open_page
       expect(page).to have_content("Welcome, test@test")
     end
 
     it 'I see the title "Find Recipes By Country"', :vcr do
-      save_and_open_page
       expect(page).to have_content("Find Recipes By Country")
     end
 
