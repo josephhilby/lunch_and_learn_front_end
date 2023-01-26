@@ -25,9 +25,9 @@
 
   <h3 align="center">
     <br />
-    <a href="https://github.com/josephhilby/lunch_and_learn/issues">Report Bug</a>
+    <a href="https://github.com/josephhilby/unch_and_learn_front_end/issues">Report Bug</a>
     ·
-    <a href="https://github.com/josephhilby/lunch_and_learn/issues">Request Feature</a>
+    <a href="https://github.com/josephhilby/unch_and_learn_front_end/issues">Request Feature</a>
   </h3>
 </div>
 
@@ -130,46 +130,47 @@ Front-end Main Goal(s)
 Front-end Stretch Goals
 * [ ] Add prams check and error handeling
 * [ ] Update pages with Bootstrap
-* [ ] Implement basic authentication with bcrypt
-* [ ] Utilize Cashing OR Background Workers
+* [x] Implement basic authentication with bcrypt
+* [x] Utilize Cashing OR Background Workers
 
 Front and Back-end Stretch Goals
 * [ ] Update docs with Swagger
 * [ ] Move authentication from Bcrypt to Google OAuth
 * [ ] Deploy to Heroku
 
-See the [open issues](https://github.com/josephhilby/lunch_and_learn/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/josephhilby/unch_and_learn_front_end/issues) for a full list of proposed features (and known issues).
 
 ### Wireframes
 
+<details>
+<summary><h4>Log In or Register</h4></summary>
 <div align="center">
   <table>
-    <tr>
-      <th>Login</th>
-    </tr>
     <tr>
       <td><img src="lib/images/log_in_or_register.png"></td>
     </tr>
   </table>
+</div>
+</details>
+<details>
+<summary><h4>Recipes</h4></summary>
   <table>
-    <tr>
-      <th>Recipes</th>
-    </tr>
     <tr>
       <td><img src="lib/images/recipes_show.png"></td>
     </tr>
   </table>
+</div>
+</details>
+<details>
+<summary><h4>Learning Resources & Favorites</h4></summary>
   <table>
-    <tr>
-      <th>Learning Resources</th>
-      <th>Favorite Recipes</th>
-    </tr>
     <tr>
       <td><img src="lib/images/country_show.png"></td>
       <td><img src="lib/images/favorites.png"></td>
     </tr>
   </table>
 </div>
+</details>
 
 ### Learning Goals
 
@@ -279,10 +280,10 @@ Distributed under the MIT License.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/josephhilby/lunch_and_learn.svg?style=for-the-badge
-[contributors-url]: https://github.com/josephhilby/lunch_and_learn/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/josephhilby/lunch_and_learn.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/josephhilby/lunch_and_learn/network/members
-[issues-shield]: https://img.shields.io/github/issues/josephhilby/lunch_and_learn.svg?style=for-the-badge
-[issues-url]: https://github.com/josephhilby/lunch_and_learn/issues
+[contributors-shield]: https://img.shields.io/github/contributors/josephhilby/lunch_and_learn_front_end.svg?style=for-the-badge
+[contributors-url]: https://github.com/josephhilby/unch_and_learn_front_end/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/josephhilby/lunch_and_learn_front_end.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/josephhilby/unch_and_learn_front_end/network/members
+[issues-shield]: https://img.shields.io/github/issues/josephhilby/lunch_and_learn_front_end.svg?style=for-the-badge
+[issues-url]: https://github.com/josephhilby/unch_and_learn_front_end/issues
 [product-screenshot]: lib/images/screenshot.png

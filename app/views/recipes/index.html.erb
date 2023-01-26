@@ -1,37 +1,43 @@
 <body>
-  <% if !@recipes %>
-    <div class='flex-container'>
-      <div class="flex-items" id="title">
-        <h3>Find Recipes By Country<h3>
+  <div class='flex-container'>
+    <div class="flex-items" id="title">
+      <h3>Find Recipes By Country<h3>
+    </div>
+
+    <div class="flex-items" id="find_recipes_by_country_form">
+      <%= form_with url: recipes_path, method: :get, local: true do |f| %>
+        <%= f.label :country %>
+        <%= f.text_field :country %>
+
+        <%= f.submit "Find Recipes", class: 'button1' %>
+      <% end %> <br>
+    </div>
+
+    <div class='flex-items' id= 'random_country_button'>
+      <%= button_to "Choose a Country for me!", recipes_path, method: :get, params: { country: 'random' }, class: 'button1' %>
+    </div>
+
+    <div class='flex-items' id= 'my_favorites_button'>
+      <%= button_to "Show me my favorites", favorites_path(@current_user_id), method: :get, class: 'button1' %>
+    </div>
+  </div>
+
+  <div class='flex-container'>
+    <% if @recipes %>
+      <div class='flex-items' id= 'learn_about_country_button'>
+        <%= button_to "Learn about #{@recipes.first.country}", url: "country/#{@recipes.first.country}", method: :get, class: 'button1' %>
       </div>
 
-      <div class="flex-items" id="find_recipes_by_country_form">
-        <%= form_with url: recipes_path, method: :get, local: true do |f| %>
-          <%= f.label :name %>
-          <%= f.text_field :name %>
-
-          <%= f.submit "Find Recipes", class: 'button1' %>
-        <% end %> <br>
+      <div class='cards' id='cards'>
+        <% @recipes.each do |recipe| %>
+          <article class='card'>
+            <img src=<%="#{recipe.image}"%>>
+            <div class='text'>
+              <h3 style="text-decoration: none;"><%= link_to recipe.title, "#{recipe.url}" %></h3>
+            </div>
+          </article>
+        <% end %>
       </div>
-
-      <div class='flex-items' id= 'random_country_button'>
-        <%= button_to "Choose a Country for me!", recipes_path, method: :get, params: { country: 'random' },class: 'button1' %>
-      </div>
-    </div>
-  <% end %>
-  <% if @recipes %>
-    <div class='flex-items' id= 'learn_about_country_button'>
-      <%= button_to "Learn about #{@recipes.first.country}", url: "country/#{@recipes.first.country}", method: :get, class: 'button1' %>
-    </div>
-    <div class='cards' id='cards'>
-      <% @recipes.each do |recipe| %>
-        <article class='card'>
-          <img src=<%="#{recipe.image}"%>>
-          <div class='text'>
-            <h3 style="text-decoration: none;"><%= link_to recipe.title, "#{recipe.url}" %></h3>
-          </div>
-        </article>
-      <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </body>

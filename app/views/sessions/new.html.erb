@@ -1,12 +1,12 @@
 <body>
   <div class='flex-container'>
     <div class="flex-items" id="title">
-      <h3>Register a New User<h3>
+      <h3>User Log In<h3>
     </div>
 
     <div class="flex-items" id="login_form">
       <div id="register-form">
-      <%= form_with url: login_path, method: :post, local: true do |f| %>
+      <%= form_with url: sessions_path, method: :post, local: true do |f| %>
         <%= f.label :email %>
         <%= f.email_field :email %><br><br>
 

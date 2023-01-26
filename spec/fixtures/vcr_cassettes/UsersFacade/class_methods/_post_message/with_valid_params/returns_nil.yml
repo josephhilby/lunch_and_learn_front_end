@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5001/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"name":"Athena Dao","email":"new_email@to_not_conflict.com","password":"supersecretpassword","password_confirmation":"supersecretpassword"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"37439f8469b844cb240e3e0d5331a344"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e14add83-9948-4baa-8c86-a0ffb1d4b2fd
+      X-Runtime:
+      - '0.275062'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"user","attributes":{"name":"Athena Dao","email":"new_email@to_not_conflict.com","api_key":"Dq5nkM57N3NAS0BHlwHCrw"}}}'
+  recorded_at: Tue, 24 Jan 2023 21:48:19 GMT
+recorded_with: VCR 6.1.0

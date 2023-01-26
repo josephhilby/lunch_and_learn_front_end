@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5001/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"name":"Athena Dao","email":"athenadao@bestgirlever.com","password":"supersecretpassword","password_confirmation":"supersecretpassword"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"381fd22900354530f0190b3645d0bc90"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ae2e73fa-e8e0-41b9-bcce-01d98da66808
+      X-Runtime:
+      - '0.355401'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"name":"Athena Dao","email":"athenadao@bestgirlever.com","api_key":"S4W0oMeMDVGtSDso_7GGxw"}}}'
+  recorded_at: Tue, 24 Jan 2023 21:48:18 GMT
+recorded_with: VCR 6.1.0

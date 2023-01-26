@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5001/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"password":"supersecretpassword"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 563e9a0f-4cc7-48f3-8807-679c81870079
+      X-Runtime:
+      - '0.294678'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Name can''t be blank and Email can''t be blank"}'
+  recorded_at: Tue, 24 Jan 2023 21:48:19 GMT
+recorded_with: VCR 6.1.0

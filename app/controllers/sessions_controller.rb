@@ -1,6 +1,6 @@
-class UsersController < ApplicationController
-  # before_action :find_user, only: %i[discover show]
-  # skip_before_action :check_login, only: [:new, :create, :destroy ]
+class SessionsController < ApplicationController
+  before_action :find_user, only: %i[discover show]
+  skip_before_action :check_login, only: [:new, :create, :destroy ]
   skip_before_action :verify_authenticity_token
 
   def new; end
@@ -10,8 +10,9 @@ class UsersController < ApplicationController
     if user
       reset_session
       session[:user_id] = user.id
+      session[:api_key] = user.api_key
       flash[:success] = "Welcome, #{user.email}"
-      redirect_to user_path
+      redirect_to recipes_path(session[:user_id])
     else
       flash[:error] = "Unknown username or password"
       render :new
