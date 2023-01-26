@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'The Welcome Page', type: :feature do
-  let!(:user_1) {  }
-
   before do
     visit '/'
   end
