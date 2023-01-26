@@ -25,9 +25,9 @@
 
   <h3 align="center">
     <br />
-    <a href="https://github.com/josephhilby/lunch_and_learn/issues">Report Bug</a>
+    <a href="https://github.com/josephhilby/unch_and_learn_front_end/issues">Report Bug</a>
     ·
-    <a href="https://github.com/josephhilby/lunch_and_learn/issues">Request Feature</a>
+    <a href="https://github.com/josephhilby/unch_and_learn_front_end/issues">Request Feature</a>
   </h3>
 </div>
 
@@ -138,7 +138,7 @@ Front and Back-end Stretch Goals
 * [ ] Move authentication from Bcrypt to Google OAuth
 * [ ] Deploy to Heroku
 
-See the [open issues](https://github.com/josephhilby/lunch_and_learn/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/josephhilby/unch_and_learn_front_end/issues) for a full list of proposed features (and known issues).
 
 ### Wireframes
 
@@ -280,10 +280,10 @@ Distributed under the MIT License.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/josephhilby/lunch_and_learn.svg?style=for-the-badge
-[contributors-url]: https://github.com/josephhilby/lunch_and_learn/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/josephhilby/lunch_and_learn.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/josephhilby/lunch_and_learn/network/members
-[issues-shield]: https://img.shields.io/github/issues/josephhilby/lunch_and_learn.svg?style=for-the-badge
-[issues-url]: https://github.com/josephhilby/lunch_and_learn/issues
+[contributors-shield]: https://img.shields.io/github/contributors/josephhilby/lunch_and_learn_front_end.svg?style=for-the-badge
+[contributors-url]: https://github.com/josephhilby/unch_and_learn_front_end/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/josephhilby/lunch_and_learn_front_end.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/josephhilby/unch_and_learn_front_end/network/members
+[issues-shield]: https://img.shields.io/github/issues/josephhilby/lunch_and_learn_front_end.svg?style=for-the-badge
+[issues-url]: https://github.com/josephhilby/unch_and_learn_front_end/issues
 [product-screenshot]: lib/images/screenshot.png
