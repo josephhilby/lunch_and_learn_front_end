@@ -8,7 +8,7 @@ RSpec.describe 'The Recipes Page', type: :feature do
     click_button 'Log In'
   end
 
-  describe 'When I visit the recipes show page' do
+  describe 'When I visit the recipes index page' do
     it 'I see a flash message "Welcome, test@test"', :vcr do
       expect(page).to have_content("Welcome, test@test")
     end
