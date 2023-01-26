@@ -130,8 +130,8 @@ Front-end Main Goal(s)
 Front-end Stretch Goals
 * [ ] Add prams check and error handeling
 * [ ] Update pages with Bootstrap
-* [ ] Implement basic authentication with bcrypt
-* [ ] Utilize Cashing OR Background Workers
+* [x] Implement basic authentication with bcrypt
+* [x] Utilize Cashing OR Background Workers
 
 Front and Back-end Stretch Goals
 * [ ] Update docs with Swagger
