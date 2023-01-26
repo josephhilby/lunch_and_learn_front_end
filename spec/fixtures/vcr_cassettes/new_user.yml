@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5001/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"name":"test","email":"test@test.com","password":"test123","password_confirmation":"test123"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"342f463ffca71678ae1e753604287de8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 37f5b8b8-e5d9-425c-9fb8-b467289f1910
+      X-Runtime:
+      - '0.363959'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"2","type":"user","attributes":{"name":"test","email":"test@test.com","api_key":"N6PvkEh-0QlY9Yi86doZmA"}}}'
+  recorded_at: Thu, 26 Jan 2023 16:35:21 GMT
+recorded_with: VCR 6.1.0

@@ -3,6 +3,10 @@ class LunchAndLearnService
 		get_url("/api/v1/learning_resources?country=#{country}")
 	end
 
+	def get_random_learning_resources
+		get_url("/api/v1/learning_resources")
+	end
+
 	def post_user(form_data)
 		post_url("/api/v1/users", form_data.to_json)
 	end

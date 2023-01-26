@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5001/api/v1/learning_resources?country=Thailand
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 558a1502-ca78-4849-89ac-7054aee7c651
+      X-Runtime:
+      - '0.985789'
+      Content-Length:
+      - '9286'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cArgumentError:
+        A copy of Api::V1 has been removed from the module tree but is still active!\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"id":0,"trace":"activesupport (5.2.8.1) lib/active_support/dependencies.rb:495:in
+        `load_missing_constant''"},{"id":1,"trace":"activesupport (5.2.8.1) lib/active_support/dependencies.rb:195:in
+        `const_missing''"},{"id":2,"trace":"activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:285:in
+        `const_get''"},{"id":3,"trace":"activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:285:in
+        `block in constantize''"},{"id":4,"trace":"activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in
+        `each''"},{"id":5,"trace":"activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in
+        `inject''"},{"id":6,"trace":"activesupport (5.2.8.1) lib/active_support/inflector/methods.rb:281:in
+        `constantize''"},{"id":7,"trace":"activesupport (5.2.8.1) lib/active_support/dependencies.rb:582:in
+        `get''"},{"id":8,"trace":"activesupport (5.2.8.1) lib/active_support/dependencies.rb:613:in
+        `constantize''"},{"id":9,"trace":"actionpack (5.2.8.1) lib/action_dispatch/http/request.rb:88:in
+        `controller_class_for''"},{"id":10,"trace":"actionpack (5.2.8.1) lib/action_dispatch/http/parameters.rb:101:in
+        `binary_params_for?''"},{"id":11,"trace":"actionpack (5.2.8.1) lib/action_dispatch/http/parameters.rb:92:in
+        `set_binary_encoding''"},{"id":12,"trace":"actionpack (5.2.8.1) lib/action_dispatch/http/parameters.rb:69:in
+        `path_parameters=''"},{"id":13,"trace":"actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:50:in
+        `block in serve''"},{"id":14,"trace":"actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in
+        `each''"},{"id":15,"trace":"actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in
+        `serve''"},{"id":16,"trace":"actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in
+        `call''"},{"id":17,"trace":"rack (2.2.5) lib/rack/session/abstract/id.rb:266:in
+        `context''"},{"id":18,"trace":"rack (2.2.5) lib/rack/session/abstract/id.rb:260:in
+        `call''"},{"id":19,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in
+        `call''"},{"id":20,"trace":"rack (2.2.5) lib/rack/etag.rb:27:in `call''"},{"id":21,"trace":"rack
+        (2.2.5) lib/rack/conditional_get.rb:27:in `call''"},{"id":22,"trace":"rack
+        (2.2.5) lib/rack/head.rb:12:in `call''"},{"id":23,"trace":"activerecord (5.2.8.1)
+        lib/active_record/migration.rb:559:in `call''"},{"id":24,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":25,"trace":"activesupport
+        (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":26,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":27,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":28,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":29,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":30,"trace":"railties
+        (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":31,"trace":"railties
+        (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":32,"trace":"activesupport
+        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":33,"trace":"activesupport
+        (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":34,"trace":"activesupport
+        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":35,"trace":"railties
+        (5.2.8.1) lib/rails/rack/logger.rb:26:in `call''"},{"id":36,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":37,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":38,"trace":"rack
+        (2.2.5) lib/rack/runtime.rb:22:in `call''"},{"id":39,"trace":"activesupport
+        (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":40,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":41,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":42,"trace":"rack (2.2.5) lib/rack/sendfile.rb:110:in `call''"},{"id":43,"trace":"railties
+        (5.2.8.1) lib/rails/engine.rb:524:in `call''"},{"id":44,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":45,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":46,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":47,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":48,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"activesupport
+        (5.2.8.1) lib/active_support/dependencies.rb:495:in `load_missing_constant''"},{"id":1,"trace":"activesupport
+        (5.2.8.1) lib/active_support/dependencies.rb:195:in `const_missing''"},{"id":2,"trace":"activesupport
+        (5.2.8.1) lib/active_support/inflector/methods.rb:285:in `const_get''"},{"id":3,"trace":"activesupport
+        (5.2.8.1) lib/active_support/inflector/methods.rb:285:in `block in constantize''"},{"id":4,"trace":"activesupport
+        (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `each''"},{"id":5,"trace":"activesupport
+        (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `inject''"},{"id":6,"trace":"activesupport
+        (5.2.8.1) lib/active_support/inflector/methods.rb:281:in `constantize''"},{"id":7,"trace":"activesupport
+        (5.2.8.1) lib/active_support/dependencies.rb:582:in `get''"},{"id":8,"trace":"activesupport
+        (5.2.8.1) lib/active_support/dependencies.rb:613:in `constantize''"},{"id":9,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for''"},{"id":10,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?''"},{"id":11,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding''"},{"id":12,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/http/parameters.rb:69:in `path_parameters=''"},{"id":13,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/journey/router.rb:50:in `block in serve''"},{"id":14,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `each''"},{"id":15,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in `serve''"},{"id":16,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in `call''"},{"id":17,"trace":"rack
+        (2.2.5) lib/rack/session/abstract/id.rb:266:in `context''"},{"id":18,"trace":"rack
+        (2.2.5) lib/rack/session/abstract/id.rb:260:in `call''"},{"id":19,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/cookies.rb:670:in `call''"},{"id":20,"trace":"rack
+        (2.2.5) lib/rack/etag.rb:27:in `call''"},{"id":21,"trace":"rack (2.2.5) lib/rack/conditional_get.rb:27:in
+        `call''"},{"id":22,"trace":"rack (2.2.5) lib/rack/head.rb:12:in `call''"},{"id":23,"trace":"activerecord
+        (5.2.8.1) lib/active_record/migration.rb:559:in `call''"},{"id":24,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":25,"trace":"activesupport
+        (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":26,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":27,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":28,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":29,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":30,"trace":"railties
+        (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":31,"trace":"railties
+        (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":32,"trace":"activesupport
+        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":33,"trace":"activesupport
+        (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":34,"trace":"activesupport
+        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":35,"trace":"railties
+        (5.2.8.1) lib/rails/rack/logger.rb:26:in `call''"},{"id":36,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":37,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":38,"trace":"rack
+        (2.2.5) lib/rack/runtime.rb:22:in `call''"},{"id":39,"trace":"activesupport
+        (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":40,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":41,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":42,"trace":"rack (2.2.5) lib/rack/sendfile.rb:110:in `call''"},{"id":43,"trace":"railties
+        (5.2.8.1) lib/rails/engine.rb:524:in `call''"},{"id":44,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":45,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":46,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":47,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":48,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
+  recorded_at: Thu, 26 Jan 2023 16:52:11 GMT
+recorded_with: VCR 6.1.0
