@@ -19,14 +19,14 @@ RSpec.describe 'The Welcome Page', type: :feature do
         expect(page).to have_current_path('/')
       end
 
-      it 'I see a link to go back to the users new page' do
-        click_link 'Register'
+      it 'I see a button to go back to the users new page' do
+        click_button 'Create a New User'
 
         expect(page).to have_current_path(register_path)
       end
 
-      it 'I see a link to go back to the sessions new page' do
-        click_link 'Log In'
+      it 'I see a button to go back to the sessions new page' do
+        click_button 'Log In'
 
         expect(page).to have_current_path(login_path)
       end
@@ -46,28 +46,21 @@ RSpec.describe 'The Welcome Page', type: :feature do
         visit '/'
       end
 
-      xit 'I see the title of the application' do
+      it 'I see the title of the application', :vcr do
         expect(page).to have_content('Lunch and Learn')
       end
 
-      xit 'I see a link to go back to the welcome page' do
+      it 'I see a link to go back to the welcome page', :vcr do
         click_link 'Home'
 
         expect(page).to have_current_path('/')
       end
 
-      xit 'I see a link to logout' do
+      it 'I see a link to logout', :vcr do
         click_link 'Log Out'
 
-        expect(page).to have_current_path(logout_path)
-      end
-
-      xit 'I dont see a link to go back to the users new page' do
-        expect(page).to_not have_content('Register')
-      end
-
-      xit 'I dont see a link to go back to the sessions new page' do
-        expect(page).to_not have_content('Log In')
+        expect(page).to have_current_path('/')
+        expect(page).to have_content('You have successfully loged out')
       end
     end
   end
