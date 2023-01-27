@@ -124,11 +124,12 @@ Front-end Main Goal(s)
 * [x] `/register` new page
 * [x] `/login` new page
 * [x] `/recipes` index page
-* [ ] `/country/:name` show page
+* [x] `/country/:name` show page
 * [ ] `/favorites` index page
 
 Front-end Stretch Goals
-* [ ] Add prams check and error handeling
+
+* [x] Add error handling and FE validations
 * [ ] Update pages with Bootstrap
 * [x] Implement basic authentication with bcrypt
 * [x] Utilize Cashing OR Background Workers
