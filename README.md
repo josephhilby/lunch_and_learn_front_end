@@ -124,7 +124,7 @@ Front-end Main Goal(s)
 * [x] `/register` new page
 * [x] `/login` new page
 * [x] `/recipes` index page
-* [ ] `/country/:name` show page
+* [x] `/country/:name` show page
 * [ ] `/favorites` index page
 
 Front-end Stretch Goals
