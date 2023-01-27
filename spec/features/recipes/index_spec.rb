@@ -50,7 +50,7 @@ RSpec.describe 'The Recipes Page', type: :feature do
           fill_in :country, with: 'thai'
           click_button 'Find Recipes'
         end
-        expect(page).to have_button("Learn about Thailand")
+        expect(page).to have_link("Learn about Thailand")
       end
 
       xit 'I see recipe cards with recipes from Thailand', :vcr do
