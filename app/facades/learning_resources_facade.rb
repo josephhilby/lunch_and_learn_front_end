@@ -4,6 +4,7 @@ class LearningResourcesFacade
   end
 
   def find_resources_by_country
+    binding.pry
     if get_resources_results[:message]
       return nil
     else

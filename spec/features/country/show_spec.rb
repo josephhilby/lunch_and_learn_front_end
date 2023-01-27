@@ -21,7 +21,8 @@ RSpec.describe 'Country Show Page' do
     end
 
     it 'displays a video window with a video from YouTube about the country', :vcr do
-      save_and_open_page
+
+      
     end
 
     xit 'shows a gallery of images about the country', :vcr do

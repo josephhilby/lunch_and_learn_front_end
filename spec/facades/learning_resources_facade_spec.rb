@@ -10,8 +10,8 @@ RSpec.describe LearningResourcesFacade do
 
   describe 'instance_methods' do
     describe '#find_resources_by_country' do
-      it 'returns an Array of learning resource objects' do
-        expect(LearningResourcesFacade.new({country: 'Thailand'}).find_resources_by_country).to be_a LearningResource
+      it 'returns a Learning Resource object' do
+        expect(LearningResourcesFacade.new({country: 'Japan'}).find_resources_by_country).to be_a LearningResource
       end
     end
   end
