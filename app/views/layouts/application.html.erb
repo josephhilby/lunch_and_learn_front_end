@@ -13,10 +13,22 @@
       <%= msg %>
     </div>
     <% end %>
-    <%= link_to 'Home', "/" %>
-    <% if logged_in? %>
-      | <%= link_to 'Find Recipes', recipes_path(@current_user_id) %> | <%= link_to 'My Favorites', favorites_path(@current_user_id) %> | <%= link_to 'Log Out', logout_path %>
-    <% end %><br><br>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+      </li>
+      <% if logged_in? %>
+        <li class="nav-item">
+          <a class="nav-link active" href="/recipes/<%=@current_user_id%>">Find Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/favorites/<%=@current_user_id%>">My Favorites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/logout">Log Out</a>
+        </li>
+      <% end %>
+    </ul><br><br>
     <h1><center>Lunch and Learn</center></h1>
   </head>
 
