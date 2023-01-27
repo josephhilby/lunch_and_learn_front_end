@@ -25,7 +25,7 @@
   <div class='flex-container'>
     <% if @recipes %>
       <div class='flex-items' id= 'learn_about_country_button'>
-        <%= button_to "Learn about #{@recipes.first.country}", url: "country/#{@recipes.first.country}", method: :get, class: 'button1' %>
+        <%= button_to "Learn about #{@recipes.first.country}", "/country/#{@recipes.first.country}", method: :get, class: 'button1' %>
       </div>
 
       <div class='cards' id='cards'>
