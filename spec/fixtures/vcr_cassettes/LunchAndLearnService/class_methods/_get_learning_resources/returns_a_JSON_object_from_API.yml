@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5001/api/v1/learning_resources?country=thai
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"85d5806352c9c8b1d0a5437528e2408c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e8e246f6-6870-4693-82c2-5d47d2278a55
+      X-Runtime:
+      - '1.701983'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"learning_resource","attributes":{"country":"Thailand","video":{"title":"A
+        Super Quick History of Laos","youtube_video_id":"uw8hjVqxMXw"},"images":[{"alt_tag":"Man
+        Standing Outside a Prayer Temple","url":"https://images.pexels.com/photos/3393546/pexels-photo-3393546.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Boats
+        on Seashore","url":"https://images.pexels.com/photos/3732494/pexels-photo-3732494.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Peron
+        Praying at Buddha For Good luck","url":"https://images.pexels.com/photos/3243020/pexels-photo-3243020.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Palm
+        Trees","url":"https://images.pexels.com/photos/2271198/pexels-photo-2271198.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Black
+        Temple With Forest Background","url":"https://images.pexels.com/photos/130159/pexels-photo-130159.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"2
+        Brown Elephants on Brown Sand","url":"https://images.pexels.com/photos/4012567/pexels-photo-4012567.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Group
+        of Elephants Leaning on Tree","url":"https://images.pexels.com/photos/4012568/pexels-photo-4012568.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Boat
+        on Body of Water","url":"https://images.pexels.com/photos/4206646/pexels-photo-4206646.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Brown
+        and White Temple Under Blue Sky","url":"https://images.pexels.com/photos/236517/pexels-photo-236517.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"The
+        Big Buddha Under Blue Sky","url":"https://images.pexels.com/photos/6027587/pexels-photo-6027587.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Aerial
+        Shot of Coastal Area","url":"https://images.pexels.com/photos/8299486/pexels-photo-8299486.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Tom
+        Yum Soup in White Ceramic Bowl","url":"https://images.pexels.com/photos/12561895/pexels-photo-12561895.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Fresh
+        Coconut Juice with Pink Flowers on a Wooden Table","url":"https://images.pexels.com/photos/12580174/pexels-photo-12580174.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Sanctuary
+        of Truth Museum Under Blue Sky","url":"https://images.pexels.com/photos/13099696/pexels-photo-13099696.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Phuket
+        Big Buddha in Karon, Thailand","url":"https://images.pexels.com/photos/12805256/pexels-photo-12805256.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"}]}}}'
+  recorded_at: Fri, 27 Jan 2023 00:47:47 GMT
+recorded_with: VCR 6.1.0

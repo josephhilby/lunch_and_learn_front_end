@@ -147,6 +147,48 @@ RSpec.describe LunchAndLearnService do
 			end
 		end
 
+    describe '#get_learning_resources' do
+      it 'returns a JSON object from API', :vcr do
+        country = "thai"
+				return_body = LunchAndLearnService.new.get_learning_resources(country)
+
+        expect(return_body).to have_key :data
+        expect(return_body[:data]).to have_key :id
+        expect(return_body[:data]).to have_key :type
+        expect(return_body[:data][:type]).to eq('learning_resource')
+        expect(return_body[:data]).to have_key :attributes
+
+        attrs = return_body[:data][:attributes]
+        expect(attrs).to have_key :country
+        expect(attrs[:country]).to eq('Thailand')
+        expect(attrs).to have_key :video
+        expect(attrs[:video]).to have_key :title
+        expect(attrs[:video]).to have_key :youtube_video_id
+        expect(attrs).to have_key :images
+        expect(attrs[:images]).to be_an Array
+      end
+    end
+
+    describe '#get_random_learning_resources' do
+      it 'returns a JSON object from API', :vcr do
+				return_body = LunchAndLearnService.new.get_random_learning_resources
+
+        expect(return_body).to have_key :data
+        expect(return_body[:data]).to have_key :id
+        expect(return_body[:data]).to have_key :type
+        expect(return_body[:data][:type]).to eq('learning_resource')
+        expect(return_body[:data]).to have_key :attributes
+
+        attrs = return_body[:data][:attributes]
+        expect(attrs).to have_key :country
+        expect(attrs).to have_key :video
+        expect(attrs[:video]).to have_key :title
+        expect(attrs[:video]).to have_key :youtube_video_id
+        expect(attrs).to have_key :images
+        expect(attrs[:images]).to be_an Array
+      end
+    end
+
 		describe '.get_url', :vcr do
 			it 'returns JSON hash from response body' do
 				url = LunchAndLearnService.new.get_url("/api/v1/recipes")
