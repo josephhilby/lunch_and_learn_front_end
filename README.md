@@ -282,9 +282,9 @@ Distributed under the MIT License.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/josephhilby/lunch_and_learn_front_end.svg?style=for-the-badge
-[contributors-url]: https://github.com/josephhilby/unch_and_learn_front_end/graphs/contributors
+[contributors-url]: https://github.com/josephhilby/lunch_and_learn_front_end/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/josephhilby/lunch_and_learn_front_end.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/josephhilby/unch_and_learn_front_end/network/members
+[forks-url]: https://github.com/othneildrew/josephhilby/lunch_and_learn_front_end/network/members
 [issues-shield]: https://img.shields.io/github/issues/josephhilby/lunch_and_learn_front_end.svg?style=for-the-badge
-[issues-url]: https://github.com/josephhilby/unch_and_learn_front_end/issues
+[issues-url]: https://github.com/josephhilby/lunch_and_learn_front_end/issues
 [product-screenshot]: lib/images/screenshot.png
