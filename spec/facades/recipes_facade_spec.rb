@@ -17,7 +17,7 @@ RSpec.describe RecipesFacade do
         end
       end
 
-      context 'witn non-valid params' do
+      context 'with non-valid params' do
         it 'returns nil', :vcr do
           expect(RecipesFacade.new({country: 'xkcd'}).find_recipes_by_country).to eq(nil)
           expect(RecipesFacade.new({country: ''}).find_recipes_by_country).to eq(nil)
@@ -80,7 +80,7 @@ RSpec.describe RecipesFacade do
         end
       end
 
-      context 'with non-vlid params' do
+      context 'with non-valid params' do
         it 'returns an error message', :vcr do
           expect(RecipesFacade.new({country: 'xkcd'}).get_recipes_results).to eq({message: "Not Found"})
           expect(RecipesFacade.new({country: ''}).get_recipes_results).to eq({message: "Not Found"})

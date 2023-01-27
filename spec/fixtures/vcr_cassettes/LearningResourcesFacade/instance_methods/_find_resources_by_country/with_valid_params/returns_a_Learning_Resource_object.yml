@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5001/api/v1/learning_resources?country=Japan
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"37854d70169b1111451c926d358745d8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ab2d86e6-32ac-4160-9ebd-63195bc2cc52
+      X-Runtime:
+      - '1.395635'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"learning_resource","attributes":{"country":"Japan","video":{"title":"A
+        Super Quick History of Japan","youtube_video_id":"74g8q804ukA"},"images":[{"alt_tag":"Red
+        and Black Temple Surrounded by Trees Photo","url":"https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Close
+        Up Photography of Cherry Blossom Tree","url":"https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Woman
+        Walking in the Street during Night Time","url":"https://images.pexels.com/photos/1134166/pexels-photo-1134166.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Pagoda
+        in Gray Scale Shot","url":"https://images.pexels.com/photos/301614/pexels-photo-301614.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Photo
+        Of Houses","url":"https://images.pexels.com/photos/2187605/pexels-photo-2187605.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Turned-on
+        Street Light","url":"https://images.pexels.com/photos/590478/pexels-photo-590478.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Man
+        Holding An Umbrella","url":"https://images.pexels.com/photos/1822605/pexels-photo-1822605.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Mt.
+        Fuji, Japan","url":"https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Neon
+        Signs","url":"https://images.pexels.com/photos/1798631/pexels-photo-1798631.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Photo
+        of Himeji Castle Behind White Cherry Blossoms","url":"https://images.pexels.com/photos/1654748/pexels-photo-1654748.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Pagoda
+        Temple Near Lake Under Cloudy Sky","url":"https://images.pexels.com/photos/1829980/pexels-photo-1829980.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"People
+        Walking on Street Near Buildings","url":"https://images.pexels.com/photos/2339009/pexels-photo-2339009.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"People
+        Walking On The Streets Surrounded By Buildings","url":"https://images.pexels.com/photos/1510595/pexels-photo-1510595.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Gray
+        Concrete Pathway Between Red-and-black Pillars","url":"https://images.pexels.com/photos/1310788/pexels-photo-1310788.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Side
+        View of  Woman in Illuminated City at Night","url":"https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"}]}}}'
+  recorded_at: Fri, 27 Jan 2023 01:03:13 GMT
+recorded_with: VCR 6.1.0
