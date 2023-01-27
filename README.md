@@ -128,7 +128,7 @@ Front-end Main Goal(s)
 * [ ] `/favorites` index page
 
 Front-end Stretch Goals
-* [ ] Add prams check and error handeling
+* [ ] Add error handeling and FE validations
 * [ ] Update pages with Bootstrap
 * [x] Implement basic authentication with bcrypt
 * [x] Utilize Cashing OR Background Workers
