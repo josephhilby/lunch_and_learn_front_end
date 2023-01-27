@@ -20,12 +20,12 @@
     <div class='flex-items' id= 'my_favorites_button'>
       <%= button_to "Show me my favorites", favorites_path(@current_user_id), method: :get, class: 'button1' %>
     </div>
-  </div>
+  </div><br>
 
   <div class='flex-container'>
     <% if @recipes %>
       <div class='flex-items' id= 'learn_about_country_button'>
-        <%= button_to "Learn about #{@recipes.first.country}", "/country/#{@recipes.first.country}", method: :get, class: 'button1' %>
+        <%= link_to "Learn about #{@recipes.first.country}", "/country/#{@recipes.first.country}", class: "btn btn-info" %>
       </div>
 
       <div class='cards' id='cards'>
