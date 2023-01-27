@@ -145,3 +145,8 @@ img {
   width: 100%;
   max-width: 850px;
 }
+
+body {
+  background: rgb(234, 252, 255);
+  background: radial-gradient(circle, rgba(234, 252, 255, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
