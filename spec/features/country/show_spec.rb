@@ -20,10 +20,12 @@ RSpec.describe 'Country Show Page' do
       expect(page).to have_content('Japan')
     end
 
-    xit 'displays a video window with a video from YouTube about the country' do
+    it 'displays a video window with a video from YouTube about the country' do
+      page.should have_selector 'iframe'
     end
 
-    xit 'shows a gallery of images about the country' do
+    it 'shows a gallery of images about the country' do
+      page.should have_css('#carouselExampleIndicators')
     end
   end
 end
