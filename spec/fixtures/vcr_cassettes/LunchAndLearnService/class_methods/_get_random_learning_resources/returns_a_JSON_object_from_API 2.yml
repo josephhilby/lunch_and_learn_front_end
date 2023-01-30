@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5001/api/v1/learning_resources
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"dbe77abd0061fb40005d2d07ded02a8d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4972cc8e-190b-4510-af8c-9cfb169abd88
+      X-Runtime:
+      - '1.181268'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"learning_resource","attributes":{"country":"Portugal","video":{"title":"A
+        Super Quick History of Portugal","youtube_video_id":"nQh6V8adGXw"},"images":[{"alt_tag":"Bird''s
+        Eye View Photography Of Cove","url":"https://images.pexels.com/photos/1368502/pexels-photo-1368502.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"People
+        at City","url":"https://images.pexels.com/photos/1534560/pexels-photo-1534560.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"PeOple
+        Walking Between Buildings","url":"https://images.pexels.com/photos/1559908/pexels-photo-1559908.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Beige
+        And Pink Castle","url":"https://images.pexels.com/photos/1547735/pexels-photo-1547735.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"White
+        Concrete Structure With Green and Red Plants","url":"https://images.pexels.com/photos/1013427/pexels-photo-1013427.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Photo
+        of People Riding on City Tram","url":"https://images.pexels.com/photos/1545510/pexels-photo-1545510.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Suspension
+        Bridge over Body of Water","url":"https://images.pexels.com/photos/290141/pexels-photo-290141.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"White
+        Boat Near Houses","url":"https://images.pexels.com/photos/2549156/pexels-photo-2549156.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"White
+        Castle Beside Body of Water","url":"https://images.pexels.com/photos/461936/pexels-photo-461936.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"White
+        and Orange Concrete House Near Body of Water","url":"https://images.pexels.com/photos/2867883/pexels-photo-2867883.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Free
+        stock photo of architecture, bridge, city","url":"https://images.pexels.com/photos/2549573/pexels-photo-2549573.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"People
+        Walking Under White Concrete Architecture","url":"https://images.pexels.com/photos/1730403/pexels-photo-1730403.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"Island
+        Landscape","url":"https://images.pexels.com/photos/1681148/pexels-photo-1681148.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"People
+        Walking in Plaza","url":"https://images.pexels.com/photos/1548024/pexels-photo-1548024.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"},{"alt_tag":"People
+        Walking on Street Near Yellow Tram","url":"https://images.pexels.com/photos/3780224/pexels-photo-3780224.jpeg?auto=compress\u0026cs=tinysrgb\u0026dpr=1\u0026fit=crop\u0026h=200\u0026w=280"}]}}}'
+  recorded_at: Fri, 27 Jan 2023 00:49:01 GMT
+recorded_with: VCR 6.1.0
